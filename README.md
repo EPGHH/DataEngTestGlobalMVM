@@ -16,4 +16,5 @@ Paso 1: Se cre una primera versión del diagrama de solución, al identificar qu
 Paso 1: Se diseña un diagrama ER sobre el cual se puede proceder a construir el código que generará la data de acuerdo a éste.
         Se agrega una columna last_modified_date para tener un registro de cuando fue agregado cada uno de los datos.
 
-Paso 2: Se implemnta el código
+Paso 2: Se implementa el código para generar la data.
+        El cual se piensa de la siguiente forma: 

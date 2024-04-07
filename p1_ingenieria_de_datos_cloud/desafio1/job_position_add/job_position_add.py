@@ -28,8 +28,8 @@ class JobPositionAdd:
             with open('data_resources/job_position.csv', 'r', newline='', encoding='utf-8') as file:
                 reader = csv.reader(file)
                 for row in reader:
-                    if row and row[0] == str(job_position_id) and row[1] == str(fk_departament_id):
-                        return "Warning", "Job position ID and fk_departament_id pair already exists."
+                    if row[0] == str(job_position_id):
+                        return "Warning", "Job position ID already exists."
 
             # Open the CSV file in append mode and write job_position details
             with open('data_resources/job_position.csv', 'a', newline='', encoding='utf-8') as file:
