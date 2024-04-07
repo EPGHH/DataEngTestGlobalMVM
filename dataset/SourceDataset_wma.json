@@ -1,0 +1,32 @@
+{
+	"name": "SourceDataset_wma",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ws-synapse-data-eng-globalmvm-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "department",
+				"fileSystem": "rawdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "departament_id",
+				"type": "String"
+			},
+			{
+				"name": "departament_name",
+				"type": "String"
+			}
+		]
+	}
+}
