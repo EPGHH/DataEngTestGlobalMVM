@@ -1,0 +1,20 @@
+{
+	"name": "Destination_employee",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ws-synapse-data-eng-globalmvm-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "employee",
+				"fileSystem": "masterdata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
