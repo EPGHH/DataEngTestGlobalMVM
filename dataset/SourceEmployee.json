@@ -1,0 +1,60 @@
+{
+	"name": "SourceEmployee",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ws-synapse-data-eng-globalmvm-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "employee",
+				"fileSystem": "rawdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "employee_id",
+				"type": "String"
+			},
+			{
+				"name": "fk_job_position_id",
+				"type": "String"
+			},
+			{
+				"name": "employee_name",
+				"type": "String"
+			},
+			{
+				"name": "hire_date",
+				"type": "String"
+			},
+			{
+				"name": "salary",
+				"type": "String"
+			},
+			{
+				"name": "birth_date",
+				"type": "String"
+			},
+			{
+				"name": "phone_number",
+				"type": "String"
+			},
+			{
+				"name": "email",
+				"type": "String"
+			},
+			{
+				"name": "address",
+				"type": "String"
+			}
+		]
+	}
+}

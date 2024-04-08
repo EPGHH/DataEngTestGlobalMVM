@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "CREATE VIEW [dbo].[View]\n\tAS SELECT * FROM [departamentos]\n\n-- Crear la vista\nCREATE VIEW dbo.View_company  \nAS  \nSELECT \n    d.departament_id,\n    d.departament_name,\n    pt.job_position_id,\n    pt.fk_departament_id,\n    pt.job_position_name,\n    e.employee_id,\n    e.fk_job_position_id,\n    e.employee_name,\n    e.hire_date,\n    e.salary,\n    e.birth_date,\n    e.phone_number,\n    e.email,\n    e.address\nFROM \n    [dbo].[departamentos] d  \nLEFT JOIN \n    [dbo].[puesto_trabajo] pt ON d.departament_id = pt.fk_departament_id  \nLEFT JOIN \n    [dbo].[empleados] e ON pt.job_position_id = e.fk_job_position_id  \nWITH CHECK OPTION;  \n\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "database",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

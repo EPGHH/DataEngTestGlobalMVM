@@ -1,0 +1,20 @@
+{
+	"name": "DestinationDepartment",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ws-synapse-data-eng-globalmvm-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "department",
+				"fileSystem": "masterdata"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
