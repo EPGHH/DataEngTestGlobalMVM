@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_wma",
+	"name": "DestinationDepartment",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ws-synapse-data-eng-globalmvm-WorkspaceDefaultStorage",
