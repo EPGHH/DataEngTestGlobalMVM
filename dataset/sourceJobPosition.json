@@ -1,5 +1,5 @@
 {
-	"name": "source_job_position",
+	"name": "sourceJobPosition",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ws-synapse-data-eng-globalmvm-WorkspaceDefaultStorage",
