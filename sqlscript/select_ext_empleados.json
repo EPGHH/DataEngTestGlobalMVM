@@ -1,0 +1,17 @@
+{
+	"name": "select_ext_empleados",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [employee_id]\n,[fk_job_position_id]\n,[employee_name]\n,[hire_date]\n,[salary]\n,[birth_date]\n,[phone_number]\n,[email]\n,[address]\n FROM [dbo].[empleados]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "database",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
