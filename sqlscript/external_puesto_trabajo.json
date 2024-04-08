@@ -1,0 +1,17 @@
+{
+	"name": "external_puesto_trabajo",
+	"properties": {
+		"content": {
+			"query": "IF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseParquetFormat') \n\tCREATE EXTERNAL FILE FORMAT [SynapseParquetFormat] \n\tWITH ( FORMAT_TYPE = PARQUET)\nGO\n\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'masterdata_accountdatalake_dfs_core_windows_net') \n\tCREATE EXTERNAL DATA SOURCE [masterdata_accountdatalake_dfs_core_windows_net] \n\tWITH (\n\t\tLOCATION = 'abfss://masterdata@accountdatalake.dfs.core.windows.net' \n\t)\nGO\n\nCREATE EXTERNAL TABLE [dbo].[puesto_trabjo] (\n\t[job_position_id] nvarchar(4000),\n\t[fk_departament_id] nvarchar(4000),\n\t[job_position_name] nvarchar(4000)\n\t)\n\tWITH (\n\tLOCATION = 'job_position/',\n\tDATA_SOURCE = [masterdata_accountdatalake_dfs_core_windows_net],\n\tFILE_FORMAT = [SynapseParquetFormat]\n\t)\nGO\n\n\nSELECT TOP 100 * FROM [dbo].[puesto_trabjo]\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "database",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

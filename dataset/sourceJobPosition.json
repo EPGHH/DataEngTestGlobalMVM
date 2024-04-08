@@ -1,0 +1,36 @@
+{
+	"name": "sourceJobPosition",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ws-synapse-data-eng-globalmvm-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "job_position",
+				"fileSystem": "rawdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "job_position_id",
+				"type": "String"
+			},
+			{
+				"name": "fk_departament_id",
+				"type": "String"
+			},
+			{
+				"name": "job_position_name",
+				"type": "String"
+			}
+		]
+	}
+}

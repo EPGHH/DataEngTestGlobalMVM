@@ -1,0 +1,17 @@
+{
+	"name": "selec_ext_departamentos",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [departament_id]\n,[departament_name]\n FROM [dbo].[departamentos]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "database",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
