@@ -1,0 +1,17 @@
+{
+	"name": "select_ext_ouesto_trabajo",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [job_position_id]\n,[fk_departament_id]\n,[job_position_name]\n FROM [dbo].[puesto_trabjo]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "database",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
