@@ -87,13 +87,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_wma",
+						"referenceName": "SourceDepartment",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_wma",
+						"referenceName": "DestinationDepartment",
 						"type": "DatasetReference"
 					}
 				]
